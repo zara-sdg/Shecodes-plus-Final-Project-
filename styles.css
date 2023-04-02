@@ -80,12 +80,13 @@ a {
   margin-left: 8px;
   margin-top: 200px;
   display: flex;
-  max-width: 500px;
 }
+
 ul.week-prediction > li {
   padding: 10px;
   color: #292728;
   font-weight: 500;
+  max-width: 500px;
 }
 ul.week-prediction > li > p {
   text-align: center;

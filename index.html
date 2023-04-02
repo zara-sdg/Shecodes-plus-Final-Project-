@@ -2,54 +2,78 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/4c6aa88429.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/GitHub/homework-plus-week7/styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/4c6aa88429.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/GitHub/homework-plus-week7/styles.css">
+  <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="weatherapp-body">
-            <div class="row">
-                <div class="col-5">
-                    <p>Now</p>
-                    <div class="current-weather">
-                        <h1>SHIRAZ</h1>
-                        <p CLASS="emoji"><i class="fa-solid fa-sun"></i>
-                            <i class="fa-solid fa-cloud-showers-heavy"></i>
-                        </p>
-                        <ul>
-                            <li>Wind Speed:8mph</li>
-                            <li>Direction:east</li>
-                            <li>Humidity:70%</li>
-                        </ul>
-                        <h2>18°C | 72°F</h2>
-                        <UL>
-                            <li>Rainy</li>
-                            <li>Sunday 8:39</li>
-                        </UL>
-                    </div>
-                </div>
-
-                <div class="col-7 part2">
-
-
-                </div>
-
-
+  <div class="container">
+    <div class="weatherapp-wrapper">
+      <div class="weatherapp-body">
+        <div class="row">
+          <div class="col-5">
+            <p>Now</p>
+            <div class="current-weather">
+              <h1>SHIRAZ</h1>
+              <p CLASS="emoji"><span class="sun"><i class="fa-solid fa-sun"></i></span>
+                <span class="cloud"><i class="fa-solid fa-cloud-showers-heavy"></i></span>
+              </p>
+              <ul>
+                <li>Wind Speed:8mph</li>
+                <li>Direction:east</li>
+                <li>Humidity:70%</li>
+              </ul>
+              <h2>18<span class="degree-unit"><a href="">°C</a>|<a href="">°F</a></span></h2>
+              <UL>
+                <li>Rainy</li>
+                <li>Sunday 8:39</li>
+              </UL>
             </div>
-            <small>
-                <a href="https://github.com/zara-sdg/homework-plus-week7" target="_blank">Open-source code</a>,by Zara
-                Sadeghi
-            </small>
+          </div>
+          <div class="col-7 part2">
+            <form id="search-form">
+              <input type="text" class="form-control" id="search-inpute" placeholder="Enter city here">
+              <input type="submit" class="btn btn-primary" id="search-button" value="Search">
+              <input type="button" class="btn btn-warning" id="current-button" value="Current">
+            </form>
+            <ul class="week-prediction">
+              <li>Monday <p class="week-emoji"><i class="fa-solid fa-cloud"></i></p>
+                <p>12°C</p>
+              </li>
+              <li>Tuesday <p class="week-emoji"><i class="fa-solid fa-sun"></i></p>
+                <p>16°C</p>
+              </li>
+              <li>Wedensday <p class="week-emoji"><i class="fa-solid fa-cloud-sun-rain"></i></p>
+                <p>18°C</p>
+              </li>
+              <li>Thursday <p class="week-emoji"><i class="fa-solid fa-cloud-showers-heavy"></i></p>
+                <p>10°C</p>
+              </li>
+              <li>Friday <p class="week-emoji"><i class="fa-solid fa-cloud-bolt"></i></p>
+                <p>13°C</p>
+              </li>
+              <li>Saturday <p class="week-emoji"><i class="fa-solid fa-smog"></i></p>
+                <p>16°C</p>
+              </li>
+            </ul>
+          </div>
         </div>
+
+
+      </div>
+      <small>
+        <a href="https://github.com/zara-sdg/homework-plus-week7" target="_blank">Open-source code</a>,by Zara
+        Sadeghi
+      </small>
     </div>
-    <script src="/GitHub/homework-plus-week7/app.js"></script>
+  </div>
+  <script src="/GitHub/homework-plus-week7/app.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,21 @@
-.weatherapp-body {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.weatherapp-wrapper {
   max-width: 900px;
   margin: auto;
+}
+
+.weatherapp-body {
   margin-top: 90px;
   padding: 20px;
   border: 1px solid #e8e8e8;
   border-radius: 5px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgba(216, 241, 230, 0.46) 0.1%,
+    rgba(233, 226, 226, 0.28) 90.1%
+  );
 }
 
 .current-weather {
@@ -18,28 +29,66 @@ h1 {
   line-height: 28px;
 }
 .emoji {
-  color: #2e4256;
+  display: flex;
+  justify-content: center;
   font-size: 48px;
   font-weight: 600;
   line-height: 28px;
- padding-top: 38px;
+  padding-top: 38px;
 }
-ul{
-    padding: 0;
-    margin: 0;
+.sun {
+  color: #ffca2c;
 }
-li{
-    list-style: none;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 30px;
+.cloud {
+  color: #0074d0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+}
+h2 {
+  padding-top: 8px;
+  font-size: 3rem;
+}
+.degree-unit {
+  position: relative;
+  font-size: 16px;
+  top: -20px;
+}
+a {
+  text-decoration: none;
+}
 
-
+#search-inpute {
+  background: transparent;
+  margin: 8px;
 }
-h2{
-    padding-top: 8px;
+#search-button {
+  margin-left: 8px;
 }
-
-.part2{
-    background-color: chocolate;
+#current-button {
+  color: #fff;
+}
+.week-prediction {
+  margin-left: 8px;
+  margin-top: 200px;
+  display: flex;
+}
+ul.week-prediction > li {
+  padding: 10px;
+  color: #292728;
+  font-weight: 500;
+}
+ul.week-prediction > li > p {
+  text-align: center;
+}
+.week-emoji {
+  margin-bottom: 0;
+  color: #2e4256;
 }

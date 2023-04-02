@@ -80,6 +80,7 @@ a {
   margin-left: 8px;
   margin-top: 200px;
   display: flex;
+  max-width: 500px;
 }
 ul.week-prediction > li {
   padding: 10px;

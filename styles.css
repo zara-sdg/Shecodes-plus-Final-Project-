@@ -1,6 +1,10 @@
-.weatherapp-body{
-    max-width: 900px !important;
-    margin: 0 auto ! important;
+.weatherapp-body {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 90px;
+  padding: 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
 }
 
 .current-weather {
@@ -8,7 +12,34 @@
 }
 
 h1 {
-  color: blueviolet;
-  text-align: center;
-  background-color: blue;
+  color: #2e4256;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.emoji {
+  color: #2e4256;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 28px;
+ padding-top: 38px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+
+
+}
+h2{
+    padding-top: 8px;
+}
+
+.part2{
+    background-color: chocolate;
 }

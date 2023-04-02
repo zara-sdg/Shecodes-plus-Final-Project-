@@ -68,6 +68,7 @@ a {
 #search-inpute {
   background: transparent;
   margin: 8px;
+  max-width: 500px;
 }
 #search-button {
   margin-left: 8px;
@@ -81,7 +82,7 @@ a {
   display: flex;
 }
 ul.week-prediction > li {
-  padding: 8px;
+  padding: 10px;
   color: #292728;
   font-weight: 500;
 }

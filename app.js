@@ -30,6 +30,7 @@ function showTemperature(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let feelsLike = document.querySelector("#feels-like");
   let date = document.querySelector("#date");
+  let icon = document.querySelector("#icon");
   temperature.innerHTML = Math.round(response.data.temperature.current);
   city.innerHTML = response.data.city;
   description.innerHTML = response.data.condition.description;
@@ -38,10 +39,15 @@ function showTemperature(response) {
   feelsLike.innerHTML = Math.round(response.data.temperature.feels_like);
   date.innerHTML = showDate(response.data.time * 1000);
   console.log(response.data);
+  icon.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  icon.setAttribute("alt", response.data.condition.description);
 }
 
 let apiKey = "tfed3e5cefb4b66afc87ab20o9c21efc";
-let city = "milan";
+let city = "london";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showTemperature);

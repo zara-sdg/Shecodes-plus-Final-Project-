@@ -29,7 +29,7 @@ h1 {
   line-height: 28px;
   text-transform: uppercase;
 }
-.emoji {
+/* .emoji {
   display: flex;
   justify-content: center;
   font-size: 48px;
@@ -42,7 +42,7 @@ h1 {
 }
 .cloud {
   color: #0074d0;
-}
+} */
 ul {
   padding: 0;
   margin: 0;

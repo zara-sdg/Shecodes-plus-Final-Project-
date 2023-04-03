@@ -28,17 +28,18 @@
                 <li>Feels Like: <span id="feels-like"></span>°C</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
               </ul>
-              <h2><strong id="temperature-value"></strong><span class="degree-unit"><a href="">°C</a>|<a
-                    href="">°F</a></span></h2>
-              <UL>
+              <h2><strong id="temperature-value"></strong><span class="degree-unit"><a href="" id="celsius-link"
+                    class="degree-link">°C</a>|<a href="" id="fahrenheit-link">°F</a></span></h2>
+              <ul>
                 <li id="description"></li>
                 <li>Currently: <span id="date"></span></li>
-              </UL>
+              </ul>
             </div>
           </div>
           <div class="col-7">
             <form id="search-form">
-              <input type="text" class="form-control" id="search-inpute" placeholder="Enter city here">
+              <input type="text" class="form-control" id="search-inpute" placeholder="Enter city here"
+                autocomplete="off">
               <input type="submit" class="btn btn-primary" id="search-button" value="Search">
               <input type="button" class="btn btn-warning" id="current-button" value="Current">
             </form>

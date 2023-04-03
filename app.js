@@ -31,7 +31,8 @@ function showTemperature(response) {
   let feelsLike = document.querySelector("#feels-like");
   let date = document.querySelector("#date");
   let icon = document.querySelector("#icon");
-  temperature.innerHTML = Math.round(response.data.temperature.current);
+  celciusTemperature = response.data.temperature.current;
+  temperature.innerHTML = Math.round(celciusTemperature);
   city.innerHTML = response.data.city;
   description.innerHTML = response.data.condition.description;
   humidity.innerHTML = response.data.temperature.humidity;
@@ -59,9 +60,31 @@ function searchForm(event) {
   searchCity(city);
 }
 
+function onFahrenheitClick(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature-value");
+  celcius.classList.remove("degree-link");
+  fahrenheit.classList.add("degree-link");
+  temperature.innerHTML = Math.round((9 / 5) * celciusTemperature + 32);
+}
 
+function onCelciusClick(event) {
+  event.preventDefault();
+  celcius.classList.add("degree-link");
+  fahrenheit.classList.remove("degree-link");
+  let temperature = document.querySelector("#temperature-value");
+  temperature.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchForm);
+
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", onFahrenheitClick);
+
+let celcius = document.querySelector("#celsius-link");
+celcius.addEventListener("click", onCelciusClick);
 
 searchCity("shiraz");

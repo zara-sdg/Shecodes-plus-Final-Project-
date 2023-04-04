@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-  color: #2e4256;
+  color: #132743;
   font-size: 48px;
   font-weight: 600;
   line-height: 28px;
@@ -45,7 +45,7 @@ h2 {
   font-size: 3rem;
 }
 strong {
-  color: #2e4256;
+  color: #132743;
 }
 #description {
   text-transform: capitalize;
@@ -55,7 +55,7 @@ strong {
   font-size: 16px;
   top: -20px;
 }
-.degree-link{
+.degree-link {
   color: #292728;
   cursor: default;
 }
@@ -64,9 +64,7 @@ a {
   text-decoration: none;
 }
 
-
 #search-inpute {
-  background: transparent;
   margin: 8px;
   max-width: 500px;
 }
@@ -75,6 +73,11 @@ a {
 }
 #current-button {
   color: #fff;
+  background-color: #132743;
+}
+#search-button {
+  color: #fff;
+  background-color: #74cc7e;
 }
 .week-prediction {
   margin-left: 8px;
@@ -84,10 +87,11 @@ a {
 
 ul.week-prediction > li {
   padding: 10px;
-  color: #292728;
+  color: #132743;
   font-weight: 500;
   max-width: 500px;
 }
+
 ul.week-prediction > li > p {
   text-align: center;
 }

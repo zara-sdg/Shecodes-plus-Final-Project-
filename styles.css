@@ -2,7 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .weatherapp-wrapper {
-  max-width: 930px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -79,23 +79,34 @@ a {
   color: #fff;
   background-color: #74cc7e;
 }
-.week-prediction {
-  margin-left: 8px;
-  margin-top: 200px;
-  display: flex;
-}
 
-ul.week-prediction > li {
-  padding: 10px;
-  color: #132743;
-  font-weight: 500;
-  max-width: 500px;
-}
 
-ul.week-prediction > li > p {
+
+.weather-forecast{
   text-align: center;
+  margin-left: 8px;
+  margin-top: 95px;
+  font-size: 13px;
+  font-weight: 600;
 }
-.week-emoji {
-  margin-bottom: 0;
-  color: #2e4256;
+.weather-forecast-item{
+  background: radial-gradient(circle at 10% 20%, rgb(0, 52, 89) 0%, rgb(0, 168, 232) 90%);
+  margin: 8px;
+  border-radius: 15px;
 }
+.weather-forecast-date{
+  color: #ffff;
+  padding-top: 3px;
+}
+.weather-forecast-temperature{
+    color: #ffff;
+
+}
+.weather-forecast-min{
+  opacity: 0.7;
+}
+
+
+  
+
+

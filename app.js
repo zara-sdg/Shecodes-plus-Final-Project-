@@ -45,7 +45,6 @@ function showTemperature(response) {
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   feelsLike.innerHTML = Math.round(response.data.temperature.feels_like);
   date.innerHTML = showDate(response.data.time * 1000);
-  console.log(response.data);
   icon.setAttribute(
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
@@ -84,6 +83,8 @@ function onCelciusClick(event) {
 }
 
 function showForecast(response) {
+  let forecastApi = response.data.daily;
+  console.log(forecastApi);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<p class="row">`;
   let days = [
@@ -95,10 +96,16 @@ function showForecast(response) {
     "Friday",
     "Saturday",
   ];
-  days.forEach(function (day) {
+  days.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
-      `<div class="col-auto col-md-2 weather-forecast-item"> <p class="weather-forecast-date">${day}</p><img src="" alt="" width="38"/> <p class="weather-forecast-temperature"><span class="weather-forecast-max">12°</span><span class="weather-forecast-min"> 8°</span></p></div></div>`;
+      `<div class="col-auto col-md-2 weather-forecast-item"> <p class="weather-forecast-date">${
+        forecastDay.time
+      }</p><img src="" alt="" width="38"/> <p class="weather-forecast-temperature"><span class="weather-forecast-max">${Math.round(
+        forecastDay.temperature.maximum
+      )}°</span><span class="weather-forecast-min">${Math.round(
+        forecastDay.temperature.minimum
+      )}</span></p></div></div>`;
   });
   forecastHTML = forecastHTML + `</p>`;
   forecastElement.innerHTML = forecastHTML;

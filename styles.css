@@ -73,7 +73,11 @@ a {
 }
 #current-button {
   color: #fff;
-  background-color: #132743;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
 }
 #search-button {
   color: #fff;
@@ -87,7 +91,7 @@ a {
   font-size: 13px;
   font-weight: 600;
   padding: 15px;
-  border-radius: 45px;
+  border-radius: 55px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

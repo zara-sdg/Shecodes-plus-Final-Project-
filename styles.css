@@ -88,11 +88,7 @@ a {
   font-weight: 600;
 }
 .weather-forecast-item {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(0, 52, 89) 0%,
-    rgb(0, 168, 232) 90%
-  );
+  background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
   margin: 8px;
   border-radius: 15px;
 }

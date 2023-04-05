@@ -85,7 +85,7 @@ function onCelciusClick(event) {
 
 function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<span class="row">`;
+  let forecastHTML = `<p class="row">`;
   let days = [
     "Sunday",
     "Monday",
@@ -100,7 +100,7 @@ function showForecast(response) {
       forecastHTML +
       `<div class="col-auto col-md-2 weather-forecast-item"> <p class="weather-forecast-date">${day}</p><img src="" alt="" width="38"/> <p class="weather-forecast-temperature"><span class="weather-forecast-max">12°</span><span class="weather-forecast-min"> 8°</span></p></div></div>`;
   });
-  forecastHTML = forecastHTML + `</span>`;
+  forecastHTML = forecastHTML + `</p>`;
   forecastElement.innerHTML = forecastHTML;
 }
 

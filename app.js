@@ -101,17 +101,8 @@ function showForecast(response) {
   let forecastDay = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<p class="row">`;
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wedensday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  days.forEach(function (forecastDay, index) {
-    if (index < 6) {
+  forecastDay.forEach(function (forecastDay, index) {
+    if (index < 7) {
       forecastHTML =
         forecastHTML +
         `<div class="col-auto col-md-2 weather-forecast-item">
@@ -124,7 +115,7 @@ function showForecast(response) {
                   alt="" width="38">
                 <p class="weather-forecast-temperature"><span class="weather-forecast-max">${Math.round(
                   forecastDay.temperature.maximum
-                )}°</span><span class="weather-forecast-min">${Math.round(
+                )}°/</span><span class="weather-forecast-min">${Math.round(
           forecastDay.temperature.minimum
         )}°</span></p>
               </div>`;
@@ -145,4 +136,3 @@ fahrenheit.addEventListener("click", onFahrenheitClick);
 let celcius = document.querySelector("#celsius-link");
 celcius.addEventListener("click", onCelciusClick);
 searchCity("shiraz");
-//finished

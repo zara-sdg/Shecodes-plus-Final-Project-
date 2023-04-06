@@ -145,3 +145,4 @@ fahrenheit.addEventListener("click", onFahrenheitClick);
 let celcius = document.querySelector("#celsius-link");
 celcius.addEventListener("click", onCelciusClick);
 searchCity("shiraz");
+//finished

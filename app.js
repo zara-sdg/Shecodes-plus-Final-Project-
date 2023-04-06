@@ -22,6 +22,21 @@ function showDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wedensday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return day;
+}
+
 function getForecast(coordinates) {
   let apiKey = "tfed3e5cefb4b66afc87ab20o9c21efc";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
@@ -83,8 +98,7 @@ function onCelciusClick(event) {
 }
 
 function showForecast(response) {
-  let forecastApi = response.data.daily;
-  console.log(forecastApi);
+  let forecastDay = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<p class="row">`;
   let days = [
@@ -96,16 +110,25 @@ function showForecast(response) {
     "Friday",
     "Saturday",
   ];
-  days.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-auto col-md-2 weather-forecast-item"> <p class="weather-forecast-date">${
-        forecastDay.time
-      }</p><img src="" alt="" width="38"/> <p class="weather-forecast-temperature"><span class="weather-forecast-max">${Math.round(
-        forecastDay.temperature.maximum
-      )}°</span><span class="weather-forecast-min">${Math.round(
-        forecastDay.temperature.minimum
-      )}</span></p></div></div>`;
+  days.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-auto col-md-2 weather-forecast-item">
+                <p class="weather-forecast-date">${formatDay(
+                  forecastDay.time
+                )}</p><img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                    forecastDay.condition.icon
+                  }.png"
+                  alt="" width="38">
+                <p class="weather-forecast-temperature"><span class="weather-forecast-max">${Math.round(
+                  forecastDay.temperature.maximum
+                )}°</span><span class="weather-forecast-min">${Math.round(
+          forecastDay.temperature.minimum
+        )}°</span></p>
+              </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</p>`;
   forecastElement.innerHTML = forecastHTML;
@@ -121,5 +144,4 @@ fahrenheit.addEventListener("click", onFahrenheitClick);
 
 let celcius = document.querySelector("#celsius-link");
 celcius.addEventListener("click", onCelciusClick);
-
 searchCity("shiraz");

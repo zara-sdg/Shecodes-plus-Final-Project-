@@ -107,11 +107,6 @@ a {
     rgb(50, 172, 109) 0%,
     rgb(209, 251, 155) 100.2%
   );
-  /* background: radial-gradient(
-    circle at 12.3% 19.3%,
-    rgb(85, 88, 218) 0%,
-    rgb(95, 209, 249) 100.2%
-  ); */
   margin: 10px;
   border-radius: 15px;
 }

@@ -74,6 +74,10 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+function currentButtonWeather() {
+  alert("Please Enter your current city");
+}
+
 function searchForm(event) {
   event.preventDefault();
   let searchInpute = document.querySelector("#search-inpute");
@@ -135,4 +139,7 @@ fahrenheit.addEventListener("click", onFahrenheitClick);
 
 let celcius = document.querySelector("#celsius-link");
 celcius.addEventListener("click", onCelciusClick);
+
+let currentButton = document.querySelector("#current-button");
+currentButton.addEventListener("click", currentButtonWeather);
 searchCity("shiraz");

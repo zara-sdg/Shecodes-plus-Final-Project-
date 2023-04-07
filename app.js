@@ -100,9 +100,9 @@ function onCelciusClick(event) {
 function showForecast(response) {
   let forecastDay = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<p class="row">`;
+  let forecastHTML = `<p>`;
   forecastDay.forEach(function (forecastDay, index) {
-    if (index < 7) {
+    if (index < 6 && index !== 0) {
       forecastHTML =
         forecastHTML +
         `<div class="col-auto col-md-2 weather-forecast-item">
